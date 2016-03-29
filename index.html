@@ -28,7 +28,7 @@
               <div class = "col-xs-12">
                 <h3>Sign Up For the Private Beta:</h3>
                   <form id="email-form">
-                    <input type="text" name="email" placeholder=" john@hopskotch.com"/><br>
+                    <input type="text" name="email" placeholder=" john@hopskotch.com"/><br> <br>
                     <input class="submit" type="submit" value="Send"/>
                   </form>
               </div>
@@ -224,10 +224,10 @@
   var smallContent = '<div class= "col-xs-12"> <div class = "row" id="row"> <h1>Hop into the Fun</h1> <div class = "col-xs-10" id="line"></div> </div> <div class = "row" id="row"> <div class = "col-xs-12"> <h3>Sign Up For the Private Beta:</h3> <form id="email-form"> <input type="text" name="email" placeholder=" john@hopskotch.com"/> <br><br><input class="submit" type="submit" value="Send"/></form> <br><br> </div> </div> <br><br><br>  <div class = "row"> <div class= "col-md-12 iphone-cont"> <img id = "iphone" class="img-responsive center-block" src="iphone.png"> </div></div>';
   var isSmall = false;
   $(window).resize(function() {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1000 && isSmall === false) {
       isSmall = true;
       $('.container-fluid').html(smallContent);
-    } else if (window.innerWidth > 999) {
+    } else if (window.innerWidth > 999 && isSmall === true) {
       isSmall = false;
       $('.container-fluid').html(originalContent);
     }
