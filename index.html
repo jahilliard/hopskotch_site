@@ -24,11 +24,12 @@
               <h1>Hop into the Fun</h1>
               <div class = "col-xs-10" id="line"></div> 
             </div>
-            <div id="row">
+            <div  class = "row" id="row">
               <div class = "col-xs-12">
                 <h3>Sign Up For the Private Beta:</h3>
                   <form id="email-form">
-                    <input type="text" name="email" placeholder=" john@hopskotch.com"><br>
+                    <input type="text" name="email" placeholder=" john@hopskotch.com"/><br>
+                    <input class="submit" type="submit" value="Send"/>
                   </form>
               </div>
             </div>
@@ -123,6 +124,16 @@
       width: 100%;
     }
 
+    input[type=submit]{
+      border: 2px solid white;
+      font-family: PrintBold;
+      font-size: 30;
+      border-radius: 7px;
+      background-color: transparent;
+      color: white; 
+      float: right;
+    }
+
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
    header{
@@ -149,6 +160,8 @@
       font-family: PrintBold;
       font-size: 36px;
       width: 100%;
+      position:relative;
+      z-index:2;
     }
     .hopskotch {
       margin-right: 5px;
@@ -196,8 +209,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
   <script type="text/javascript">
-  var originalContent = '<div class="row"> <div class= "col-md-4 iphone-cont"> <img id = "iphone" class = "center-block"  src="iphone.png"> </div> <div class= "col-xs-7"> <div id="row"> <h1>Hop into the Fun</h1> <div class = "col-xs-10" id="line"></div> </div> <div id="row"> <div class = "col-xs-12"> <h3>Sign Up For the Private Beta:</h3> <form id="email-form"> <input type="text" name="email" placeholder=" john@hopskotch.com"> </form><br> </div> </div> </div> </div>';
-  var smallContent = '<div class= "col-xs-12"> <div id="row"> <h1>Hop into the Fun</h1> <div class = "col-xs-10" id="line"></div> </div> <div id="row"> <div class = "col-xs-12"> <h3>Sign Up For the Private Beta:</h3> <form id="email-form"> <input type="text" name="email" placeholder=" john@hopskotch.com"> </form> <br><br> </div> </div> <br><br><br>  <div class = "row"> <div class= "col-md-12 iphone-cont"> <img id = "iphone" class="img-responsive center-block" src="iphone.png"> </div></div>';
+  var originalContent = '<div class="row"> <div class= "col-md-4 iphone-cont"> <img id = "iphone" class = "center-block"  src="iphone.png"> </div> <div class= "col-xs-7"> <div class = "row" id="row"> <h1>Hop into the Fun</h1> <div class = "col-xs-10" id="line"></div> </div> <div class = "row" id="row"> <div class = "col-xs-12"> <h3>Sign Up For the Private Beta:</h3> <form id="email-form"> <input type="text" name="email" placeholder=" john@hopskotch.com"/> <br><br><input class="submit" type="submit" value="Send"/></form><br> </div> </div> </div> </div>';
+  var smallContent = '<div class= "col-xs-12"> <div class = "row" id="row"> <h1>Hop into the Fun</h1> <div class = "col-xs-10" id="line"></div> </div> <div class = "row" id="row"> <div class = "col-xs-12"> <h3>Sign Up For the Private Beta:</h3> <form id="email-form"> <input type="text" name="email" placeholder=" john@hopskotch.com"/> <br><br><input class="submit" type="submit" value="Send"/></form> <br><br> </div> </div> <br><br><br>  <div class = "row"> <div class= "col-md-12 iphone-cont"> <img id = "iphone" class="img-responsive center-block" src="iphone.png"> </div></div>';
   var phoneContent = '';
   $(window).resize(function() {
     if (window.innerWidth < 1000) {
