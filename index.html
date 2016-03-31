@@ -245,7 +245,7 @@
     var email = $( "input" ).val()
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,10})+$/;
     if (regex.test(email)) {
-      myFirebaseRef.push({"email":email});
+      myFirebaseRef.set({"email":email});
       $("#row").append('<div class = "conf" style="height:'+h+'px;width:100%;background-color:#02E06A;border-radius:7px; text-align: center;vertical-align:text-top;"><h3 style="margin-top:0px;">Thanks for submitting the email</h3></div>')
       $(".conf").fadeOut(2000, function(){ $(".conf").remove(); });
 
